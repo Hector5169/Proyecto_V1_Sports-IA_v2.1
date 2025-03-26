@@ -344,4 +344,26 @@ document.addEventListener('DOMContentLoaded', function() {
             return null;
         }
     }
+
+    // app.js
+    document.getElementById('loginForm')?.addEventListener('submit', function (e) {
+        e.preventDefault();
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+        alert(`Login con: ${email}`);
+    });
+
+    document.getElementById('registerForm')?.addEventListener('submit', function (e) {
+        e.preventDefault();
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+        alert(`Registro exitoso de: ${name}, Email: ${email}`);
+    });
+
+    document.getElementById('logoutButton')?.addEventListener('click', function () {
+        alert('Sesión cerrada. Redirigiendo al login.');
+        window.location.href = 'login.html';
+    });
+
 });
